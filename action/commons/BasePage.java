@@ -21,17 +21,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-//import io.qameta.allure.Step;
-//import pageObjects.nopCommerce.admin.AdminLoginPageObject;
-//import pageObjects.nopCommerce.user.UserAddressPageObject;
-//import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
-//import pageObjects.nopCommerce.user.UserHomePageObject;
-//import pageObjects.nopCommerce.user.UserLoginPageObject;
-//import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
-//import pageObjects.nopCommerce.user.UserRegisterPageObject;
-//import pageObjects.nopCommerce.user.UserRewardPoinPageObject;
-//import pageUIs.jQuery.dataTable.BasePagejQueryUI;
-//import pageUIs.nopCommerce.user.BasePageNopCommerceUI;
+
 
 public class BasePage {
 

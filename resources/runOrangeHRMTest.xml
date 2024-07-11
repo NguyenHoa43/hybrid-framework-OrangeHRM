@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite  name="OrangeHRM">
+<listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</listeners>
+	<test name="Run On FIREFOX">
+	<parameter name = "browser" value = "firefox"/>
+    <classes>
+    	<!--Trigger common Register run first-->
+      <!-- <class name="com.nopcommerce.common.Common_01_Register_Cookie"/>-->
+      <class name="com.OrangeHRM.admin.Login"/>
+    </classes>
+  	</test> 
+</suite> 

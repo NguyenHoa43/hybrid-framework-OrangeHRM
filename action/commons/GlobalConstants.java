@@ -3,8 +3,8 @@ package commons;
 import java.io.File;
 
 public class GlobalConstants {
-	public static final String USER_PAGE_URL = "https://demo.nopcommerce.com/";
-	public static final String ADMIN_PAGE_URL = "https://admin-demo.nopcommerce.com/";
+	
+	public static final String PAGE_URL = "http://localhost/orangehrm5/web/index.php/auth/login";
 
 	public static final String OS_NAME = System.getProperty("os.name");
 	public static final String PROJECT_PATH = System.getProperty("user.dir");
@@ -16,7 +16,7 @@ public class GlobalConstants {
 	public static final String DRAG_DROP_HTML5 = PROJECT_PATH + File.separator + "dragDropHTML5";
 	public static final String AUTO_IT_SCRIPT = PROJECT_PATH + File.separator + "autoIT";
 	public static final String REPORTNG_SCREENSHOT = PROJECT_PATH + File.separator + "ReportNGImages" + File.separator;
-	public static final String REPORTNG_SCREENSHOT_EXTENTV2 = PROJECT_PATH + File.separator + "extentV2" + File.separator;
+	
 	public static final String REPORTNG_SCREENSHOT_EXTENTV5 = PROJECT_PATH + File.separator + "extentV5" + File.separator;
 
 	public static final String DB_DEV_URL = "192.168.1.15:9860";

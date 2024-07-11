@@ -70,7 +70,7 @@ public class BaseTest {
 			throw new RuntimeException("Browser name invalid !");
 		}
 		driverBaseTest.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIME_OUT));
-		driverBaseTest.get(GlobalConstants.USER_PAGE_URL);
+		driverBaseTest.get(GlobalConstants.PAGE_URL);
 		return driverBaseTest;
 	}
 
