@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OrangeHRM]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="Run On FIREFOX(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.OrangeHRM.admin.Login">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="initBeforeSuite"/>
+          <include name="TC_01_Login_Page"/>
+        </methods>
+      </class> <!-- com.OrangeHRM.admin.Login -->
+    </classes>
+  </test> <!-- Run On FIREFOX(failed) -->
+</suite> <!-- Failed suite [OrangeHRM] -->

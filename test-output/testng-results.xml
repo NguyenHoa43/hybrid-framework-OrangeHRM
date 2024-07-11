@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-11T13:42:10 ICT" name="OrangeHRM" finished-at="2024-07-11T13:42:20 ICT" duration-ms="10342">
+    <groups>
+    </groups>
+    <test started-at="2024-07-11T13:42:10 ICT" name="Run On FIREFOX" finished-at="2024-07-11T13:42:20 ICT" duration-ms="10342">
+      <class name="com.OrangeHRM.admin.Login">
+        <test-method is-config="true" signature="initBeforeSuite()[pri:0, instance:com.OrangeHRM.admin.Login@6531a794]" started-at="2024-07-11T13:42:10 ICT" name="initBeforeSuite" finished-at="2024-07-11T13:42:10 ICT" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBeforeSuite -->
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.OrangeHRM.admin.Login@6531a794]" started-at="2024-07-11T13:42:10 ICT" name="beforeClass" finished-at="2024-07-11T13:42:16 ICT" duration-ms="6191" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC_01_Login_Page()[pri:0, instance:com.OrangeHRM.admin.Login@6531a794]" started-at="2024-07-11T13:42:16 ICT" name="TC_01_Login_Page" finished-at="2024-07-11T13:42:19 ICT" duration-ms="2398" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Login_Page -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.OrangeHRM.admin.Login@6531a794]" started-at="2024-07-11T13:42:19 ICT" name="afterClass" finished-at="2024-07-11T13:42:20 ICT" duration-ms="1707" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.OrangeHRM.admin.Login -->
+    </test> <!-- Run On FIREFOX -->
+  </suite> <!-- OrangeHRM -->
+</testng-results>
