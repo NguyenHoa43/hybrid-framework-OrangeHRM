@@ -27,11 +27,47 @@ public class Login extends BaseTest{
 		
 	}
 
+	
+		
 		@Test
-		public void TC_01_Login_Page() {
+		public void TC_01_Login_Page_Not_User() {
+			loginPage.inputToUserNameTextBox(driver, "    ");
+			loginPage.inputToPasswordTextBox(driver, passWord);
+			loginPage.clickToButtonLogin(driver);
+			verifyEquals(loginPage.getTextErrorMessage(driver), "Required");
+		}
+		@Test
+		public void TC_02_Login_Page_Not_Password() {
+			loginPage.refreshToPage(driver);
+			loginPage.inputToUserNameTextBox(driver, userName);
+			loginPage.inputToPasswordTextBox(driver, "     ");
+			loginPage.clickToButtonLogin(driver);
+			verifyEquals(loginPage.getTextErrorMessage(driver), "Required");
+		}
+		@Test
+		public void TC_03_Login_Page_Wrong_User() {
+			loginPage.refreshToPage(driver);
+			loginPage.inputToUserNameTextBox(driver, "abcAxs");
+			loginPage.inputToPasswordTextBox(driver, passWord);
+			loginPage.clickToButtonLogin(driver);
+			verifyEquals(loginPage.getTextErrorMessageWrongUser(driver), "Invalid credentials");
+		}
+		@Test
+		public void TC_04_Login_Page_Wrong_Password() {
+			loginPage.refreshToPage(driver);
+			loginPage.inputToUserNameTextBox(driver, userName);
+			loginPage.inputToPasswordTextBox(driver, "abjchcac12");
+			loginPage.clickToButtonLogin(driver);
+			verifyEquals(loginPage.getTextErrorMessageWrongPassword(driver), "Invalid credentials");
+		}
+		
+		@Test
+		public void TC_05_Login_Page_Successfull() {
+			loginPage.refreshToPage(driver);
 			loginPage.inputToUserNameTextBox(driver, userName);
 			loginPage.inputToPasswordTextBox(driver, passWord);
 			loginPage.clickToButtonLogin(driver);
+			
 		}
 		
 		@AfterClass(alwaysRun = true)
