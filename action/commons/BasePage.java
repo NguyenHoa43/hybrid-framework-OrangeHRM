@@ -514,54 +514,7 @@ public class BasePage {
 //		getWebElement(driver, BasePagejQueryUI.UPLOADFILE).sendKeys(fullFileName);
 //	}
 //
-//	public UserAddressPageObject openAddressLink(WebDriver driver) {
-//		waitForElementVisible(driver, BasePageNopCommerceUI.ADDRESS_LINK);
-//		clickToElement(driver, BasePageNopCommerceUI.ADDRESS_LINK);
-//		return PageGeneratorManager.getUserAddressPage(driver);
-//	}
-//
-//	public UserMyProductReviewPageObject openMyProductReviewPage(WebDriver driver) {
-//		waitForElementVisible(driver, BasePageNopCommerceUI.MY_PRODUCT_REVIEW_LINK);
-//		clickToElement(driver, BasePageNopCommerceUI.MY_PRODUCT_REVIEW_LINK);
-//		return PageGeneratorManager.getUserMyProductReviewPage(driver);
-//	}
-//
-//	public UserCustomerInforPageObject openCustomerInfor(WebDriver driver) {
-//		waitForElementClickable(driver, BasePageNopCommerceUI.CUSTOMER_INFOR_LINK);
-//		clickToElement(driver, BasePageNopCommerceUI.CUSTOMER_INFOR_LINK);
-//		return PageGeneratorManager.getUserAccountPage(driver);
-//	}
-//
-//	public UserRewardPoinPageObject openRewardPoin(WebDriver driver) {
-//		waitForElementVisible(driver, BasePageNopCommerceUI.REWARD_POIN_LINK);
-//		clickToElement(driver, BasePageNopCommerceUI.REWARD_POIN_LINK);
-//		return PageGeneratorManager.getUserRewardPoinPage(driver);
-//	}
-//
-//	public UserCustomerInforPageObject clickToAccountLink(WebDriver driver) {
-//		waitForElementVisible(driver, BasePageNopCommerceUI.ACCOUNT_LINK);
-//		clickToElement(driver, BasePageNopCommerceUI.ACCOUNT_LINK);
-//		return PageGeneratorManager.getUserAccountPage(driver);
-//	}
-//
-//	public UserRegisterPageObject clickToRegisterLink(WebDriver driver) {
-//		waitForElementClickable(driver, BasePageNopCommerceUI.REGISTER_LINK);
-//		clickToElement(driver, BasePageNopCommerceUI.REGISTER_LINK);
-//		return PageGeneratorManager.getUserRegisterPage(driver);
-//	}
-//
-//	public UserLoginPageObject clickToLoginLink(WebDriver driver) {
-//		waitForElementClickable(driver, BasePageNopCommerceUI.LOGIN_LINK);
-//		clickToElement(driver, BasePageNopCommerceUI.LOGIN_LINK);
-//		return PageGeneratorManager.getUserLoginPage(driver);
-//
-//	}
-//	public UserLoginPageObject clickToLogoutLink(WebDriver driver) {
-//		waitForElementClickable(driver, BasePageNopCommerceUI.LOGOUT_USER_LINK);
-//		clickToElement(driver, BasePageNopCommerceUI.LOGOUT_USER_LINK);
-//		return PageGeneratorManager.getUserLoginPage(driver);
-//		
-//	}
+//	
 //	
 //
 //	public BasePage openPagesAtMyAccountByName(WebDriver driver, String pageName) {

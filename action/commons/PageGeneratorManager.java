@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import pageObjects.OrangeHRM.admin.AdminLoginPageObject;
 import pageObjects.OrangeHRM.admin.DashboardOrangeHRMPageObject;
+import pageObjects.OrangeHRM.admin.PimOrangeHRMPageObject;
 
 
 
@@ -17,4 +18,7 @@ public class PageGeneratorManager {
 		return new DashboardOrangeHRMPageObject(driver);
 	}
 
+	public static PimOrangeHRMPageObject getAdminPimPage(WebDriver driver) {
+		return new PimOrangeHRMPageObject(driver);
+	}
 }

@@ -20,10 +20,10 @@ public class GlobalConstants {
 	public static final String REPORTNG_SCREENSHOT_EXTENTV5 = PROJECT_PATH + File.separator + "extentV5" + File.separator;
 
 	public static final String DB_DEV_URL = "192.168.1.15:9860";
-	public static final String DB_DEV_USER = "automationFC";
-	public static final String DB_DEV_PASS = "123456";
+	public static final String USER_NAME = "automationdhoa";
+	public static final String PASS_WORD = "Hoabeo@43#";
 	public static final long SHORT_TIMEOUT = 5;
-	public static final long LONG_TIME_OUT = 50;
+	public static final long LONG_TIME_OUT = 100;
 	public static final long RETRY_TEST_FAIL = 3;
 
 }

@@ -18,9 +18,6 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
 
-
-
-
 public class BaseTest {
 
 	private WebDriver driverBaseTest;

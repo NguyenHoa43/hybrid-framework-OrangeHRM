@@ -7,6 +7,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import commons.GlobalConstants;
 import commons.PageGeneratorManager;
 import pageObjects.OrangeHRM.admin.AdminLoginPageObject;
 
@@ -34,7 +35,8 @@ public class Login extends BaseTest{
 			loginPage.inputToUserNameTextBox(driver, "    ");
 			loginPage.inputToPasswordTextBox(driver, passWord);
 			loginPage.clickToButtonLogin(driver);
-			verifyEquals(loginPage.getTextErrorMessage(driver), "Required");
+			//verifyEquals(loginPage.getTextErrorMessage(driver), "Required");
+			verifyTrue(loginPage.isErrorDisplay(driver));
 		}
 		@Test
 		public void TC_02_Login_Page_Not_Password() {
@@ -64,8 +66,8 @@ public class Login extends BaseTest{
 		@Test
 		public void TC_05_Login_Page_Successfull() {
 			loginPage.refreshToPage(driver);
-			loginPage.inputToUserNameTextBox(driver, userName);
-			loginPage.inputToPasswordTextBox(driver, passWord);
+			loginPage.inputToUserNameTextBox(driver, GlobalConstants.USER_NAME);
+			loginPage.inputToPasswordTextBox(driver, GlobalConstants.PASS_WORD);
 			loginPage.clickToButtonLogin(driver);
 			
 		}

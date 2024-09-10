@@ -42,4 +42,9 @@ public class AdminLoginPageObject extends BasePage{
 		return getElementText(driver, AdminOrangeHRMPageUIs.ERROR_MASSAGE_WRONG_USER);
 		
 	}
+	
+	public boolean isErrorDisplay(WebDriver driver) {
+		waitForElementVisible(driver, AdminOrangeHRMPageUIs.ERROR_MASSAGE);
+		return isElementDisplay(driver, AdminOrangeHRMPageUIs.ERROR_MASSAGE);
+	}
 }
