@@ -64,10 +64,10 @@ public class AddEmployee extends BaseTest{
 		
 	}
 	
-//	@AfterClass(alwaysRun = true)
-//	public void afterClass() {
-//		closeBrowserDriver();
-//		
-//	}
+	@AfterClass(alwaysRun = true)
+	public void afterClass() {
+		closeBrowserDriver();
+		
+	}
 
 }

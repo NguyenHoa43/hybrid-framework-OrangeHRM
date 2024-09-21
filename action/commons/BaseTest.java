@@ -18,6 +18,8 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest {
 
 	private WebDriver driverBaseTest;
@@ -31,40 +33,21 @@ public class BaseTest {
 		log = LogFactory.getLog(getClass());
 	}
 
+	
 	protected WebDriver getBrowserDriver(String browserName) {
-		if (browserName.equals("firefox")) {
-			
-			driverBaseTest = new FirefoxDriver();
-		} else if (browserName.equals("headlessfirefox")) {
-			
-			FirefoxOptions options = new FirefoxOptions();
-			options.addArguments("--headless");
-			options.addArguments("window-size=1920x1080");
-			driverBaseTest = new FirefoxDriver(options);
-		} else if (browserName.equals("coccoc")) {
-			
-			ChromeOptions options = new ChromeOptions();
-			if (GlobalConstants.OS_NAME.startsWith("Windows")) {
-				options.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
-			} else {
-				options.setBinary(".....");
-			}
-			driverBaseTest = new ChromeDriver(options);
-		} else if (browserName.equals("chrome")) {
-			
-			driverBaseTest = new ChromeDriver();
-		} else if (browserName.equals("headlesschrome")) {
-			
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
-			options.addArguments("window-size=1920x1080");
-			driverBaseTest = new ChromeDriver(options);
-		
-		} else if (browserName.equals("edge")) {
-			
-			driverBaseTest = new EdgeDriver();
-		} else {
-			throw new RuntimeException("Browser name invalid !");
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+		switch (browserList) {
+		case CHROME:
+			driverBaseTest = WebDriverManager.chromedriver().create();
+			break;
+		case FIREFOX:
+			driverBaseTest = WebDriverManager.firefoxdriver().create();
+			break;
+		case EDGE:
+			driverBaseTest = WebDriverManager.edgedriver().create();
+			break;
+		default:
+			throw new RuntimeException("Browser name is not valid");
 		}
 		driverBaseTest.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIME_OUT));
 		driverBaseTest.get(GlobalConstants.PAGE_URL);
