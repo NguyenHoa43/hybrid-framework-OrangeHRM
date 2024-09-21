@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
@@ -45,6 +46,24 @@ public class BaseTest {
 			break;
 		case EDGE:
 			driverBaseTest = new EdgeDriver();
+			break;
+		case CHROME_HEADLESS:
+			ChromeOptions chOption = new ChromeOptions();
+			chOption.addArguments("--headless");
+			chOption.addArguments("window-size=1920x1080");
+			driverBaseTest = new ChromeDriver(chOption);
+			break;
+		case EDGE_HEADLESS:
+			EdgeOptions egOption = new EdgeOptions();
+			egOption.addArguments("--headless");
+			egOption.addArguments("window-size=1920x1080");
+			driverBaseTest = new EdgeDriver(egOption);
+			break;
+		case FIREFOX_HEADLESS:
+			FirefoxOptions ffOptions = new FirefoxOptions();
+			ffOptions.addArguments("--headless");
+			ffOptions.addArguments("window-size=1920x1080");
+			driverBaseTest = new FirefoxDriver(ffOptions);
 			break;
 		default:
 			throw new RuntimeException("Browser name is not valid");
