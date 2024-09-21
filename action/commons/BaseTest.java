@@ -38,13 +38,13 @@ public class BaseTest {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		switch (browserList) {
 		case CHROME:
-			driverBaseTest = WebDriverManager.chromedriver().create();
+			driverBaseTest = new ChromeDriver();
 			break;
 		case FIREFOX:
-			driverBaseTest = WebDriverManager.firefoxdriver().create();
+			driverBaseTest = new FirefoxDriver();
 			break;
 		case EDGE:
-			driverBaseTest = WebDriverManager.edgedriver().create();
+			driverBaseTest = new EdgeDriver();
 			break;
 		default:
 			throw new RuntimeException("Browser name is not valid");
