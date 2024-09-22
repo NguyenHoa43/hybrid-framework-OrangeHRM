@@ -5,56 +5,6 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test thread-count="5" name="Run On FIREFOX(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="com.OrangeHRM.admin.Login">
-        <methods>
-          <include name="TC_05_Login_Page_Successfull"/>
-          <include name="beforeClass"/>
-          <include name="initBeforeSuite"/>
-          <include name="afterClass"/>
-          <include name="TC_04_Login_Page_Wrong_Password"/>
-          <include name="TC_02_Login_Page_Not_Password"/>
-          <include name="TC_01_Login_Page_Not_User"/>
-          <include name="TC_03_Login_Page_Wrong_User"/>
-        </methods>
-      </class> <!-- com.OrangeHRM.admin.Login -->
-      <class name="com.OrangeHRM.pim.AddEmployee">
-        <methods>
-          <include name="initBeforeSuite"/>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-          <include name="TC_01_Creat_New_Employee"/>
-        </methods>
-      </class> <!-- com.OrangeHRM.pim.AddEmployee -->
-    </classes>
-  </test> <!-- Run On FIREFOX(failed) -->
-  <test thread-count="5" name="Run On CHROME(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.OrangeHRM.admin.Login">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="TC_05_Login_Page_Successfull"/>
-          <include name="initBeforeSuite"/>
-          <include name="afterClass"/>
-          <include name="TC_04_Login_Page_Wrong_Password"/>
-          <include name="TC_02_Login_Page_Not_Password"/>
-          <include name="TC_01_Login_Page_Not_User"/>
-          <include name="TC_03_Login_Page_Wrong_User"/>
-        </methods>
-      </class> <!-- com.OrangeHRM.admin.Login -->
-      <class name="com.OrangeHRM.pim.AddEmployee">
-        <methods>
-          <include name="initBeforeSuite"/>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-          <include name="TC_01_Creat_New_Employee"/>
-        </methods>
-      </class> <!-- com.OrangeHRM.pim.AddEmployee -->
-    </classes>
-  </test> <!-- Run On CHROME(failed) -->
   <test thread-count="5" name="Run On EDGE(failed)">
     <parameter name="browser" value="edge"/>
     <classes>

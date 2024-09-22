@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -30,7 +32,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-	private WebDriver driverBaseTest;
+	private WebDriver driver;
 	protected final Log log;
 	
 	@BeforeSuite
@@ -46,53 +48,64 @@ public class BaseTest {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		switch (browserList) {
 		case CHROME:
+			Map<String, Object> prefs = new HashMap<String, Object>();
 			ChromeDriverService chromeService = new ChromeDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "chromeDriver.log")).build();
-			driverBaseTest = new ChromeDriver(chromeService);
+			ChromeOptions chomeOptions = new ChromeOptions();
+			chomeOptions.addArguments("--disable-notifications");
+			chomeOptions.addArguments("--lang=vi");
+			chomeOptions.setExperimentalOption("prefs", prefs);
+			driver = new ChromeDriver(chromeService, chomeOptions);
 			break;
 		case FIREFOX:
 			FirefoxDriverService firefoxservice = new GeckoDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "FirefoxDriver.log")).build();
-			driverBaseTest = new FirefoxDriver(firefoxservice);
+			FirefoxOptions firefoxOption = new FirefoxOptions();
+			firefoxOption.addArguments("--disable-notifications");
+			firefoxOption.addPreference("intl.accept_languages", "vi-vn, vi");
+			driver = new FirefoxDriver(firefoxservice, firefoxOption);
 			break;
 		case EDGE:
 			EdgeDriverService edgeservice = new EdgeDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "edgeDriver.log")).build();
-			driverBaseTest = new EdgeDriver(edgeservice);
+			EdgeOptions edgeOption = new EdgeOptions();
+			edgeOption.addArguments("--disable-notifications");
+			edgeOption.addArguments("--lang=vi");
+			driver = new EdgeDriver(edgeservice, edgeOption);
 			break;
 		case CHROME_HEADLESS:
 			ChromeOptions chOption = new ChromeOptions();
 			chOption.addArguments("--headless");
 			chOption.addArguments("window-size=1920x1080");
-			driverBaseTest = new ChromeDriver(chOption);
+			driver = new ChromeDriver(chOption);
 			break;
 		case EDGE_HEADLESS:
 			EdgeOptions egOption = new EdgeOptions();
 			egOption.addArguments("--headless");
 			egOption.addArguments("window-size=1920x1080");
-			driverBaseTest = new EdgeDriver(egOption);
+			driver = new EdgeDriver(egOption);
 			break;
 		case FIREFOX_HEADLESS:
 			FirefoxOptions ffOptions = new FirefoxOptions();
 			ffOptions.addArguments("--headless");
 			ffOptions.addArguments("window-size=1920x1080");
-			driverBaseTest = new FirefoxDriver(ffOptions);
+			driver = new FirefoxDriver(ffOptions);
 			break;
 		default:
 			throw new RuntimeException("Browser name is not valid");
 		}
-		driverBaseTest.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIME_OUT));
-		driverBaseTest.get(GlobalConstants.PAGE_URL);
-		return driverBaseTest;
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIME_OUT));
+		driver.get(GlobalConstants.PAGE_URL);
+		return driver;
 	}
 
 	protected WebDriver getBrowserDriver(String browserName, String appURL) {
 		if (browserName.equals("firefox")) {
 			
-			driverBaseTest = new FirefoxDriver();
+			driver = new FirefoxDriver();
 		} else if (browserName.equals("headlessfirefox")) {
 			
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
-			driverBaseTest = new FirefoxDriver(options);
+			driver = new FirefoxDriver(options);
 		} else if (browserName.equals("coccoc")) {
 			
 			ChromeOptions options = new ChromeOptions();
@@ -101,26 +114,26 @@ public class BaseTest {
 			} else {
 				options.setBinary(".....");
 			}
-			driverBaseTest = new ChromeDriver(options);
+			driver = new ChromeDriver(options);
 		} else if (browserName.equals("chrome")) {
 			
-			driverBaseTest = new ChromeDriver();
+			driver = new ChromeDriver();
 		} else if (browserName.equals("headlesschrome")) {
 			
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
-			driverBaseTest = new ChromeDriver(options);
+			driver = new ChromeDriver(options);
 		
 		} else if (browserName.equals("edge")) {
 			
-			driverBaseTest = new EdgeDriver();
+			driver = new EdgeDriver();
 		} else {
 			throw new RuntimeException("Browser name invalid !");
 		}
-		driverBaseTest.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIME_OUT));
-		driverBaseTest.get(appURL);
-		return driverBaseTest;
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIME_OUT));
+		driver.get(appURL);
+		return driver;
 	}
 
 	protected int fadeNumber() {
@@ -129,7 +142,7 @@ public class BaseTest {
 	}
 	
 	public WebDriver getDriverInstance() {
-		return this.driverBaseTest;
+		return this.driver;
 	}
 	
 	protected boolean verifyTrue(boolean condition) {
@@ -196,7 +209,7 @@ public class BaseTest {
 			String osName = System.getProperty("os.name").toLowerCase();
 			log.info("OS name = " + osName);
 
-			String driverInstanceName = driverBaseTest.toString().toLowerCase();
+			String driverInstanceName = driver.toString().toLowerCase();
 			log.info("Driver instance name = " + driverInstanceName);
 
 			String browserDriverName = null;
@@ -221,9 +234,9 @@ public class BaseTest {
 				cmd = "pkill " + browserDriverName;
 			}
 
-			if (driverBaseTest != null) {
-				driverBaseTest.manage().deleteAllCookies();
-				driverBaseTest.quit();
+			if (driver != null) {
+				driver.manage().deleteAllCookies();
+				driver.quit();
 			}
 		} catch (Exception e) {
 			log.info(e.getMessage());
