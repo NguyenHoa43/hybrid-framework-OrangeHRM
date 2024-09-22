@@ -12,11 +12,16 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriverService;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.GeckoDriverService;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
@@ -41,13 +46,16 @@ public class BaseTest {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		switch (browserList) {
 		case CHROME:
-			driverBaseTest = new ChromeDriver();
+			ChromeDriverService chromeService = new ChromeDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "chromeDriver.log")).build();
+			driverBaseTest = new ChromeDriver(chromeService);
 			break;
 		case FIREFOX:
-			driverBaseTest = new FirefoxDriver();
+			FirefoxDriverService firefoxservice = new GeckoDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "FirefoxDriver.log")).build();
+			driverBaseTest = new FirefoxDriver(firefoxservice);
 			break;
 		case EDGE:
-			driverBaseTest = new EdgeDriver();
+			EdgeDriverService edgeservice = new EdgeDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "edgeDriver.log")).build();
+			driverBaseTest = new EdgeDriver(edgeservice);
 			break;
 		case CHROME_HEADLESS:
 			ChromeOptions chOption = new ChromeOptions();
