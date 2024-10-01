@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -54,27 +55,47 @@ public class BaseTest {
 			prefs.put("profile.password_manager_enabled", false);
 			prefs.put("autofill.profile_enabled", false);
 			
+			prefs.put("profile.default_content_settings.popups", 0);
+			prefs.put("download.default_directory", GlobalConstants.DOWNLOAD_FILE);
+			
 			ChromeDriverService chromeService = new ChromeDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "chromeDriver.log")).build();
 			ChromeOptions chomeOptions = new ChromeOptions();
 			chomeOptions.addArguments("--disable-notifications");
 			chomeOptions.addArguments("--disable-geolocation");
 			chomeOptions.addArguments("--lang=vi");
 			chomeOptions.setExperimentalOption("prefs", prefs);
+			chomeOptions.setExperimentalOption("useAutomationExtension", false);
+			chomeOptions.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			driver = new ChromeDriver(chromeService, chomeOptions);
 			break;
 		case FIREFOX:
-			FirefoxDriverService firefoxservice = new GeckoDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "FirefoxDriver.log")).build();
 			FirefoxOptions firefoxOption = new FirefoxOptions();
-			firefoxOption.addArguments("--disable-geolocation");
-			firefoxOption.addPreference("intl.accept_languages", "vi-vn, vi");
+			firefoxOption.addPreference("browser.download.folderList", 2);
+			firefoxOption.addPreference("browser.download.dir", GlobalConstants.DOWNLOAD_FILE);
+			firefoxOption.addPreference("browser.download.useDownloadDir", true);
+			firefoxOption.addPreference("browser.helperApps.neverAsk.saveToDisk","multipart/x-zip, application/zip, application/x-zip-compressed, " + "application/x-compressed,application/msword,application/csv," + "text/csv,image/pnj, image/jpeg, application/pdf, text/html, " + "text/plain, application/excel, application/vnd.ms-excel, " + "application/x-excel, application/x-msexcel, application/octet-stream");
+			firefoxOption.addPreference("pdfjs.disabled", true);
+			
+			FirefoxDriverService firefoxservice = new GeckoDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "FirefoxDriver.log")).build();
 			driver = new FirefoxDriver(firefoxservice, firefoxOption);
 			break;
 		case EDGE:
+			Map<String, Object> prefss = new HashMap<String, Object>();
+			prefss.put("profile.default_content_setting_values.notifications", 2);
+			prefss.put("credentials_enable_service", false);
+			prefss.put("profile.password_manager_enabled", false);
+			prefss.put("autofill.profile_enabled", false);
+			
+			
+			
 			EdgeDriverService edgeservice = new EdgeDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "edgeDriver.log")).build();
 			EdgeOptions edgeOption = new EdgeOptions();
 			edgeOption.addArguments("--disable-notifications");
 			edgeOption.addArguments("--disable-geolocation");
 			edgeOption.addArguments("--lang=vi");
+			edgeOption.setExperimentalOption("useAutomationExtension", false);
+			edgeOption.setExperimentalOption("prefs", prefss);
+			edgeOption.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			driver = new EdgeDriver(edgeservice, edgeOption);
 			break;
 		case CHROME_HEADLESS:
