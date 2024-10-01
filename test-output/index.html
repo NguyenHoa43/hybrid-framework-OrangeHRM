@@ -215,13 +215,13 @@
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Run On EDGE&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Run On CHROME&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.OrangeHRM.admin.Login&quot;/&gt;
       &lt;class name=&quot;com.OrangeHRM.pim.AddEmployee&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Run On EDGE --&gt;
+  &lt;/test&gt; &lt;!-- Run On CHROME --&gt;
 &lt;/suite&gt; &lt;!-- OrangeHRM --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -233,7 +233,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Run On EDGE (2 classes)</span>
+                <span class="test-name">Run On CHROME (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -263,27 +263,27 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TC_01_Creat_New_Employee')
 data.setCell(0, 2, 'com.OrangeHRM.pim.AddEmployee')
-data.setCell(0, 3, 7848);
+data.setCell(0, 3, 7683);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TC_04_Login_Page_Wrong_Password')
 data.setCell(1, 2, 'com.OrangeHRM.admin.Login')
-data.setCell(1, 3, 2249);
+data.setCell(1, 3, 2748);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC_05_Login_Page_Successfull')
+data.setCell(2, 1, 'TC_03_Login_Page_Wrong_User')
 data.setCell(2, 2, 'com.OrangeHRM.admin.Login')
-data.setCell(2, 3, 2054);
+data.setCell(2, 3, 2593);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC_03_Login_Page_Wrong_User')
+data.setCell(3, 1, 'TC_02_Login_Page_Not_Password')
 data.setCell(3, 2, 'com.OrangeHRM.admin.Login')
-data.setCell(3, 3, 1929);
+data.setCell(3, 3, 1192);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC_02_Login_Page_Not_Password')
+data.setCell(4, 1, 'TC_01_Login_Page_Not_User')
 data.setCell(4, 2, 'com.OrangeHRM.admin.Login')
-data.setCell(4, 3, 1169);
+data.setCell(4, 3, 1047);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TC_01_Login_Page_Not_User')
+data.setCell(5, 1, 'TC_05_Login_Page_Successfull')
 data.setCell(5, 2, 'com.OrangeHRM.admin.Login')
-data.setCell(5, 3, 934);
+data.setCell(5, 3, 1043);
 window.suiteTableData['OrangeHRM']= { tableData: data, tableDiv: 'times-div-OrangeHRM'}
 return data;
 }
@@ -327,47 +327,47 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClass(edge)</span>
-                <span class="method-start">65 ms</span>
+                <span class="method-name">beforeClass(chrome)</span>
+                <span class="method-start">83 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">TC_01_Login_Page_Not_User</span>
-                <span class="method-start">5038 ms</span>
+                <span class="method-start">18247 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_02_Login_Page_Not_Password</span>
-                <span class="method-start">5976 ms</span>
+                <span class="method-start">19302 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_03_Login_Page_Wrong_User</span>
-                <span class="method-start">7147 ms</span>
+                <span class="method-start">20497 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_04_Login_Page_Wrong_Password</span>
-                <span class="method-start">9078 ms</span>
+                <span class="method-start">23095 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_05_Login_Page_Successfull</span>
-                <span class="method-start">11329 ms</span>
+                <span class="method-start">25845 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">13384 ms</span>
+                <span class="method-start">26901 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.OrangeHRM.pim.AddEmployee</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClass(edge)</span>
-                <span class="method-start">15011 ms</span>
+                <span class="method-name">beforeClass(chrome)</span>
+                <span class="method-start">32142 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">TC_01_Creat_New_Employee</span>
-                <span class="method-start">25936 ms</span>
+                <span class="method-start">46654 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">33787 ms</span>
+                <span class="method-start">54337 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
