@@ -49,9 +49,15 @@ public class BaseTest {
 		switch (browserList) {
 		case CHROME:
 			Map<String, Object> prefs = new HashMap<String, Object>();
+			prefs.put("profile.default_content_setting_values.notifications", 2);
+			prefs.put("credentials_enable_service", false);
+			prefs.put("profile.password_manager_enabled", false);
+			prefs.put("autofill.profile_enabled", false);
+			
 			ChromeDriverService chromeService = new ChromeDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "chromeDriver.log")).build();
 			ChromeOptions chomeOptions = new ChromeOptions();
 			chomeOptions.addArguments("--disable-notifications");
+			chomeOptions.addArguments("--disable-geolocation");
 			chomeOptions.addArguments("--lang=vi");
 			chomeOptions.setExperimentalOption("prefs", prefs);
 			driver = new ChromeDriver(chromeService, chomeOptions);
@@ -59,7 +65,7 @@ public class BaseTest {
 		case FIREFOX:
 			FirefoxDriverService firefoxservice = new GeckoDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "FirefoxDriver.log")).build();
 			FirefoxOptions firefoxOption = new FirefoxOptions();
-			firefoxOption.addArguments("--disable-notifications");
+			firefoxOption.addArguments("--disable-geolocation");
 			firefoxOption.addPreference("intl.accept_languages", "vi-vn, vi");
 			driver = new FirefoxDriver(firefoxservice, firefoxOption);
 			break;
@@ -67,6 +73,7 @@ public class BaseTest {
 			EdgeDriverService edgeservice = new EdgeDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "edgeDriver.log")).build();
 			EdgeOptions edgeOption = new EdgeOptions();
 			edgeOption.addArguments("--disable-notifications");
+			edgeOption.addArguments("--disable-geolocation");
 			edgeOption.addArguments("--lang=vi");
 			driver = new EdgeDriver(edgeservice, edgeOption);
 			break;
