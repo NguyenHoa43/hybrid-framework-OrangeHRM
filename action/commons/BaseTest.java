@@ -288,4 +288,23 @@ public class BaseTest {
 			}
 		}
 	}
+	
+	public void deleteAllureReport(String folderName) {
+		try {
+			String pathFolderDownload = GlobalConstants.PROJECT_PATH + "/allure-json";
+			File file = new File(pathFolderDownload);
+			File[] listOfFiles = file.listFiles();
+			if (listOfFiles.length != 0) {
+				for (int i = 0; i < listOfFiles.length; i++) {
+					if (listOfFiles[i].isFile() && !listOfFiles[i].getName().equals("environment.properties")) {
+						new File(listOfFiles[i].toString()).delete();
+					}
+				}
+			}
+		} catch (Exception e) {
+			System.out.print(e.getMessage());
+		}
+
+	}
+	
 }

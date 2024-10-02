@@ -55,5 +55,6 @@
 	<classpathentry kind="lib" path="libAllure/jcommander-1.72.jar"/>
 	<classpathentry kind="lib" path="libraryLog4J/log4j-api-2.19.0.jar"/>
 	<classpathentry kind="lib" path="libraryLog4J/log4j-core-2.19.0.jar"/>
+	<classpathentry kind="lib" path="libAllure/aspectjweaver-1.9.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [OrangeHRM]">
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="reportConfig.AllureTestListener"/>
   </listeners>
   <test thread-count="5" name="Run On CHROME(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.OrangeHRM.pim.AddEmployee">
         <methods>
-          <include name="initBeforeSuite"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
           <include name="TC_01_Creat_New_Employee"/>
+          <include name="initBeforeSuite"/>
         </methods>
       </class> <!-- com.OrangeHRM.pim.AddEmployee -->
     </classes>

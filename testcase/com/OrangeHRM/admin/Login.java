@@ -9,6 +9,9 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGeneratorManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import pageObjects.OrangeHRM.admin.AdminLoginPageObject;
 
 public class Login extends BaseTest{
@@ -29,7 +32,8 @@ public class Login extends BaseTest{
 	}
 
 	
-		
+		@Description("Create New Employee")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		public void TC_01_Login_Page_Not_User() {
 			loginPage.inputToUserNameTextBox(driver, "    ");
@@ -38,6 +42,8 @@ public class Login extends BaseTest{
 			//verifyEquals(loginPage.getTextErrorMessage(driver), "Required");
 			verifyTrue(loginPage.isErrorDisplay(driver));
 		}
+		@Description("Create New Employee")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		public void TC_02_Login_Page_Not_Password() {
 			loginPage.refreshToPage(driver);
@@ -46,6 +52,8 @@ public class Login extends BaseTest{
 			loginPage.clickToButtonLogin(driver);
 			verifyEquals(loginPage.getTextErrorMessage(driver), "Required");
 		}
+		@Description("Create New Employee")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		public void TC_03_Login_Page_Wrong_User() {
 			loginPage.refreshToPage(driver);
@@ -54,6 +62,8 @@ public class Login extends BaseTest{
 			loginPage.clickToButtonLogin(driver);
 			verifyEquals(loginPage.getTextErrorMessageWrongUser(driver), "Invalid credentials");
 		}
+		@Description("Create New Employee")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		public void TC_04_Login_Page_Wrong_Password() {
 			loginPage.refreshToPage(driver);

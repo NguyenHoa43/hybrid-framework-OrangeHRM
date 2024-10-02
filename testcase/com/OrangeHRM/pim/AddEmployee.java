@@ -9,6 +9,9 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGeneratorManager;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import pageObjects.OrangeHRM.admin.AdminLoginPageObject;
 import pageObjects.OrangeHRM.admin.DashboardOrangeHRMPageObject;
 import pageObjects.OrangeHRM.admin.PimOrangeHRMPageObject;
@@ -48,7 +51,9 @@ public class AddEmployee extends BaseTest{
 		
 		
 	}
-	
+	// setup report allure
+	@Description("Create New Employee")
+	@Severity(SeverityLevel.NORMAL)
 	@Test
 	public void TC_01_Creat_New_Employee() {
 		pimPage.clickToButtonAdd();
