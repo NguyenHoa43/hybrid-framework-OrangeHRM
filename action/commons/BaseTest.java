@@ -63,10 +63,11 @@ public class BaseTest {
 			chomeOptions.addArguments("--disable-notifications");
 			chomeOptions.addArguments("--disable-geolocation");
 			chomeOptions.addArguments("--lang=vi");
-			/*run inprivate - chạy ẩn danh */
-//			chomeOptions.addArguments("--incognito");
-			chomeOptions.addArguments("--user-data-dir=C:/Users/Cko amo/AppData/Local/Google/Chrome/User Data/");
-			chomeOptions.addArguments("--profile-directory=Profile 11");
+			/*code run inprivate - chạy ẩn danh */
+			//chomeOptions.addArguments("--incognito");
+			/*code chạy browser trên profile để tránh xác nhận capcha hoặc verify human*/
+			//chomeOptions.addArguments("--user-data-dir=C:/Users/Cko amo/AppData/Local/Google/Chrome/User Data/");
+			//chomeOptions.addArguments("--profile-directory=Profile 11");
 			chomeOptions.setExperimentalOption("prefs", prefs);
 			chomeOptions.setExperimentalOption("useAutomationExtension", false);
 			chomeOptions.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));

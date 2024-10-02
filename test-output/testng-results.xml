@@ -1,54 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="18" passed="18" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-01T10:00:39 ICT" name="OrangeHRM" finished-at="2024-10-01T10:01:34 ICT" duration-ms="55163">
+  <suite started-at="2024-10-02T17:23:53 ICT" name="OrangeHRM" finished-at="2024-10-02T17:25:32 ICT" duration-ms="99632">
     <groups>
     </groups>
-    <test started-at="2024-10-01T10:00:39 ICT" name="Run On CHROME" finished-at="2024-10-01T10:01:34 ICT" duration-ms="55163">
+    <test started-at="2024-10-02T17:23:53 ICT" name="Run On FIREFOX" finished-at="2024-10-02T17:24:32 ICT" duration-ms="38739">
       <class name="com.OrangeHRM.admin.Login">
-        <test-method is-config="true" signature="initBeforeSuite()[pri:0, instance:com.OrangeHRM.admin.Login@74f6c5d8]" started-at="2024-10-01T10:00:39 ICT" name="initBeforeSuite" finished-at="2024-10-01T10:00:39 ICT" duration-ms="48" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initBeforeSuite -->
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.OrangeHRM.admin.Login@74f6c5d8]" started-at="2024-10-01T10:00:39 ICT" name="beforeClass" finished-at="2024-10-01T10:00:57 ICT" duration-ms="18156" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.OrangeHRM.admin.Login@5552768b]" started-at="2024-10-02T17:23:53 ICT" name="beforeClass" finished-at="2024-10-02T17:23:59 ICT" duration-ms="6255" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="TC_01_Login_Page_Not_User()[pri:0, instance:com.OrangeHRM.admin.Login@74f6c5d8]" started-at="2024-10-01T10:00:57 ICT" name="TC_01_Login_Page_Not_User" finished-at="2024-10-01T10:00:58 ICT" duration-ms="1047" status="PASS">
+        <test-method signature="TC_01_Login_Page_Not_User()[pri:0, instance:com.OrangeHRM.admin.Login@5552768b]" started-at="2024-10-02T17:23:59 ICT" name="TC_01_Login_Page_Not_User" finished-at="2024-10-02T17:24:00 ICT" duration-ms="1036" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01_Login_Page_Not_User -->
-        <test-method signature="TC_02_Login_Page_Not_Password()[pri:0, instance:com.OrangeHRM.admin.Login@74f6c5d8]" started-at="2024-10-01T10:00:58 ICT" name="TC_02_Login_Page_Not_Password" finished-at="2024-10-01T10:01:00 ICT" duration-ms="1192" status="PASS">
+        <test-method signature="TC_02_Login_Page_Not_Password()[pri:0, instance:com.OrangeHRM.admin.Login@5552768b]" started-at="2024-10-02T17:24:00 ICT" name="TC_02_Login_Page_Not_Password" finished-at="2024-10-02T17:24:02 ICT" duration-ms="1383" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_02_Login_Page_Not_Password -->
-        <test-method signature="TC_03_Login_Page_Wrong_User()[pri:0, instance:com.OrangeHRM.admin.Login@74f6c5d8]" started-at="2024-10-01T10:01:00 ICT" name="TC_03_Login_Page_Wrong_User" finished-at="2024-10-01T10:01:02 ICT" duration-ms="2593" status="PASS">
+        <test-method signature="TC_03_Login_Page_Wrong_User()[pri:0, instance:com.OrangeHRM.admin.Login@5552768b]" started-at="2024-10-02T17:24:02 ICT" name="TC_03_Login_Page_Wrong_User" finished-at="2024-10-02T17:24:04 ICT" duration-ms="2218" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_03_Login_Page_Wrong_User -->
-        <test-method signature="TC_04_Login_Page_Wrong_Password()[pri:0, instance:com.OrangeHRM.admin.Login@74f6c5d8]" started-at="2024-10-01T10:01:02 ICT" name="TC_04_Login_Page_Wrong_Password" finished-at="2024-10-01T10:01:05 ICT" duration-ms="2748" status="PASS">
+        <test-method signature="TC_04_Login_Page_Wrong_Password()[pri:0, instance:com.OrangeHRM.admin.Login@5552768b]" started-at="2024-10-02T17:24:04 ICT" name="TC_04_Login_Page_Wrong_Password" finished-at="2024-10-02T17:24:06 ICT" duration-ms="2437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_04_Login_Page_Wrong_Password -->
-        <test-method signature="TC_05_Login_Page_Successfull()[pri:0, instance:com.OrangeHRM.admin.Login@74f6c5d8]" started-at="2024-10-01T10:01:05 ICT" name="TC_05_Login_Page_Successfull" finished-at="2024-10-01T10:01:06 ICT" duration-ms="1043" status="PASS">
+        <test-method signature="TC_05_Login_Page_Successfull()[pri:0, instance:com.OrangeHRM.admin.Login@5552768b]" started-at="2024-10-02T17:24:06 ICT" name="TC_05_Login_Page_Successfull" finished-at="2024-10-02T17:24:09 ICT" duration-ms="2730" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_05_Login_Page_Successfull -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.OrangeHRM.admin.Login@74f6c5d8]" started-at="2024-10-01T10:01:06 ICT" name="afterClass" finished-at="2024-10-01T10:01:11 ICT" duration-ms="5240" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.OrangeHRM.admin.Login@5552768b]" started-at="2024-10-02T17:24:09 ICT" name="afterClass" finished-at="2024-10-02T17:24:10 ICT" duration-ms="1104" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- com.OrangeHRM.admin.Login -->
       <class name="com.OrangeHRM.pim.AddEmployee">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.OrangeHRM.pim.AddEmployee@14f232c4]" started-at="2024-10-01T10:01:11 ICT" name="beforeClass" finished-at="2024-10-01T10:01:26 ICT" duration-ms="14512" status="PASS">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.OrangeHRM.pim.AddEmployee@53aad5d5]" started-at="2024-10-02T17:24:10 ICT" name="beforeClass" finished-at="2024-10-02T17:24:23 ICT" duration-ms="12924" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC_01_Creat_New_Employee()[pri:0, instance:com.OrangeHRM.pim.AddEmployee@53aad5d5]" started-at="2024-10-02T17:24:23 ICT" name="TC_01_Creat_New_Employee" finished-at="2024-10-02T17:24:30 ICT" duration-ms="7385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Creat_New_Employee -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.OrangeHRM.pim.AddEmployee@53aad5d5]" started-at="2024-10-02T17:24:30 ICT" name="afterClass" finished-at="2024-10-02T17:24:32 ICT" duration-ms="1196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.OrangeHRM.pim.AddEmployee -->
+    </test> <!-- Run On FIREFOX -->
+    <test started-at="2024-10-02T17:24:32 ICT" name="Run On CHROME" finished-at="2024-10-02T17:25:00 ICT" duration-ms="28578">
+      <class name="com.OrangeHRM.admin.Login">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.OrangeHRM.admin.Login@6b8ca3c8]" started-at="2024-10-02T17:24:32 ICT" name="beforeClass" finished-at="2024-10-02T17:24:33 ICT" duration-ms="1943" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -59,15 +78,116 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="TC_01_Creat_New_Employee()[pri:0, instance:com.OrangeHRM.pim.AddEmployee@14f232c4]" started-at="2024-10-01T10:01:26 ICT" name="TC_01_Creat_New_Employee" finished-at="2024-10-01T10:01:34 ICT" duration-ms="7683" status="PASS">
+        <test-method signature="TC_01_Login_Page_Not_User()[pri:0, instance:com.OrangeHRM.admin.Login@6b8ca3c8]" started-at="2024-10-02T17:24:33 ICT" name="TC_01_Login_Page_Not_User" finished-at="2024-10-02T17:24:34 ICT" duration-ms="847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Login_Page_Not_User -->
+        <test-method signature="TC_02_Login_Page_Not_Password()[pri:0, instance:com.OrangeHRM.admin.Login@6b8ca3c8]" started-at="2024-10-02T17:24:34 ICT" name="TC_02_Login_Page_Not_Password" finished-at="2024-10-02T17:24:35 ICT" duration-ms="993" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Login_Page_Not_Password -->
+        <test-method signature="TC_03_Login_Page_Wrong_User()[pri:0, instance:com.OrangeHRM.admin.Login@6b8ca3c8]" started-at="2024-10-02T17:24:35 ICT" name="TC_03_Login_Page_Wrong_User" finished-at="2024-10-02T17:24:37 ICT" duration-ms="1890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_Login_Page_Wrong_User -->
+        <test-method signature="TC_04_Login_Page_Wrong_Password()[pri:0, instance:com.OrangeHRM.admin.Login@6b8ca3c8]" started-at="2024-10-02T17:24:37 ICT" name="TC_04_Login_Page_Wrong_Password" finished-at="2024-10-02T17:24:39 ICT" duration-ms="2199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_04_Login_Page_Wrong_Password -->
+        <test-method signature="TC_05_Login_Page_Successfull()[pri:0, instance:com.OrangeHRM.admin.Login@6b8ca3c8]" started-at="2024-10-02T17:24:39 ICT" name="TC_05_Login_Page_Successfull" finished-at="2024-10-02T17:24:41 ICT" duration-ms="2028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_05_Login_Page_Successfull -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.OrangeHRM.admin.Login@6b8ca3c8]" started-at="2024-10-02T17:24:41 ICT" name="afterClass" finished-at="2024-10-02T17:24:42 ICT" duration-ms="464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.OrangeHRM.admin.Login -->
+      <class name="com.OrangeHRM.pim.AddEmployee">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.OrangeHRM.pim.AddEmployee@68c72235]" started-at="2024-10-02T17:24:42 ICT" name="beforeClass" finished-at="2024-10-02T17:24:52 ICT" duration-ms="10256" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC_01_Creat_New_Employee()[pri:0, instance:com.OrangeHRM.pim.AddEmployee@68c72235]" started-at="2024-10-02T17:24:52 ICT" name="TC_01_Creat_New_Employee" finished-at="2024-10-02T17:25:00 ICT" duration-ms="7529" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01_Creat_New_Employee -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.OrangeHRM.pim.AddEmployee@14f232c4]" started-at="2024-10-01T10:01:34 ICT" name="afterClass" finished-at="2024-10-01T10:01:34 ICT" duration-ms="877" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.OrangeHRM.pim.AddEmployee@68c72235]" started-at="2024-10-02T17:25:00 ICT" name="afterClass" finished-at="2024-10-02T17:25:00 ICT" duration-ms="410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- com.OrangeHRM.pim.AddEmployee -->
     </test> <!-- Run On CHROME -->
+    <test started-at="2024-10-02T17:25:00 ICT" name="Run On EDGE" finished-at="2024-10-02T17:25:32 ICT" duration-ms="32279">
+      <class name="com.OrangeHRM.admin.Login">
+        <test-method is-config="true" signature="initBeforeSuite()[pri:0, instance:com.OrangeHRM.admin.Login@3a6bb9bf]" started-at="2024-10-02T17:23:53 ICT" name="initBeforeSuite" finished-at="2024-10-02T17:23:53 ICT" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBeforeSuite -->
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.OrangeHRM.admin.Login@3a6bb9bf]" started-at="2024-10-02T17:25:00 ICT" name="beforeClass" finished-at="2024-10-02T17:25:03 ICT" duration-ms="2966" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC_01_Login_Page_Not_User()[pri:0, instance:com.OrangeHRM.admin.Login@3a6bb9bf]" started-at="2024-10-02T17:25:03 ICT" name="TC_01_Login_Page_Not_User" finished-at="2024-10-02T17:25:04 ICT" duration-ms="1078" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Login_Page_Not_User -->
+        <test-method signature="TC_02_Login_Page_Not_Password()[pri:0, instance:com.OrangeHRM.admin.Login@3a6bb9bf]" started-at="2024-10-02T17:25:04 ICT" name="TC_02_Login_Page_Not_Password" finished-at="2024-10-02T17:25:05 ICT" duration-ms="1016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Login_Page_Not_Password -->
+        <test-method signature="TC_03_Login_Page_Wrong_User()[pri:0, instance:com.OrangeHRM.admin.Login@3a6bb9bf]" started-at="2024-10-02T17:25:05 ICT" name="TC_03_Login_Page_Wrong_User" finished-at="2024-10-02T17:25:07 ICT" duration-ms="1918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_Login_Page_Wrong_User -->
+        <test-method signature="TC_04_Login_Page_Wrong_Password()[pri:0, instance:com.OrangeHRM.admin.Login@3a6bb9bf]" started-at="2024-10-02T17:25:07 ICT" name="TC_04_Login_Page_Wrong_Password" finished-at="2024-10-02T17:25:09 ICT" duration-ms="2225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_04_Login_Page_Wrong_Password -->
+        <test-method signature="TC_05_Login_Page_Successfull()[pri:0, instance:com.OrangeHRM.admin.Login@3a6bb9bf]" started-at="2024-10-02T17:25:09 ICT" name="TC_05_Login_Page_Successfull" finished-at="2024-10-02T17:25:11 ICT" duration-ms="2077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_05_Login_Page_Successfull -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.OrangeHRM.admin.Login@3a6bb9bf]" started-at="2024-10-02T17:25:11 ICT" name="afterClass" finished-at="2024-10-02T17:25:13 ICT" duration-ms="1592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.OrangeHRM.admin.Login -->
+      <class name="com.OrangeHRM.pim.AddEmployee">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.OrangeHRM.pim.AddEmployee@34f7cfd9]" started-at="2024-10-02T17:25:13 ICT" name="beforeClass" finished-at="2024-10-02T17:25:23 ICT" duration-ms="10384" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC_01_Creat_New_Employee()[pri:0, instance:com.OrangeHRM.pim.AddEmployee@34f7cfd9]" started-at="2024-10-02T17:25:23 ICT" name="TC_01_Creat_New_Employee" finished-at="2024-10-02T17:25:31 ICT" duration-ms="7532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Creat_New_Employee -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.OrangeHRM.pim.AddEmployee@34f7cfd9]" started-at="2024-10-02T17:25:31 ICT" name="afterClass" finished-at="2024-10-02T17:25:32 ICT" duration-ms="1479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.OrangeHRM.pim.AddEmployee -->
+    </test> <!-- Run On EDGE -->
   </suite> <!-- OrangeHRM -->
 </testng-results>

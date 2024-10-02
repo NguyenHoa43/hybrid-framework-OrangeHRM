@@ -6,6 +6,7 @@ public class GlobalConstants {
 	
 	public static final String PAGE_URL = "http://localhost/orangehrm5/web/index.php/auth/login";
 
+
 	public static final String OS_NAME = System.getProperty("os.name");
 	public static final String PROJECT_PATH = System.getProperty("user.dir");
 	public static final String JAVA_VERSION = System.getProperty("java.version");

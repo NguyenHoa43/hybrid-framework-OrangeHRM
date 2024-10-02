@@ -43,10 +43,17 @@
 	<classpathentry kind="lib" path="libExtendV5/rxjava-3.0.4.jar"/>
 	<classpathentry kind="lib" path="libraryLog4J/commons-lang3-3.8.1.jar"/>
 	<classpathentry kind="lib" path="libraryLog4J/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="libraryLog4J/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="libraryReportNG/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="libraryReportNG/guice-3.0.jar"/>
 	<classpathentry kind="lib" path="libraryReportNG/reportng-1.1.4.jar"/>
 	<classpathentry kind="lib" path="libraryReportNG/velocity-1.4.jar"/>
+	<classpathentry kind="lib" path="libAllure/allure-java-commons-2.24.0.jar"/>
+	<classpathentry kind="lib" path="libAllure/allure-model-2.24.0.jar"/>
+	<classpathentry kind="lib" path="libAllure/allure-test-filter-2.24.0.jar"/>
+	<classpathentry kind="lib" path="libAllure/allure-testng-2.24.0.jar"/>
+	<classpathentry kind="lib" path="libAllure/bsh-2.0b6.jar"/>
+	<classpathentry kind="lib" path="libAllure/jcommander-1.72.jar"/>
+	<classpathentry kind="lib" path="libraryLog4J/log4j-api-2.19.0.jar"/>
+	<classpathentry kind="lib" path="libraryLog4J/log4j-core-2.19.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
