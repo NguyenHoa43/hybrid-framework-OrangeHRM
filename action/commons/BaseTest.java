@@ -63,6 +63,10 @@ public class BaseTest {
 			chomeOptions.addArguments("--disable-notifications");
 			chomeOptions.addArguments("--disable-geolocation");
 			chomeOptions.addArguments("--lang=vi");
+			/*run inprivate - chạy ẩn danh */
+//			chomeOptions.addArguments("--incognito");
+			chomeOptions.addArguments("--user-data-dir=C:/Users/Cko amo/AppData/Local/Google/Chrome/User Data/");
+			chomeOptions.addArguments("--profile-directory=Profile 11");
 			chomeOptions.setExperimentalOption("prefs", prefs);
 			chomeOptions.setExperimentalOption("useAutomationExtension", false);
 			chomeOptions.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
@@ -75,6 +79,8 @@ public class BaseTest {
 			firefoxOption.addPreference("browser.download.useDownloadDir", true);
 			firefoxOption.addPreference("browser.helperApps.neverAsk.saveToDisk","multipart/x-zip, application/zip, application/x-zip-compressed, " + "application/x-compressed,application/msword,application/csv," + "text/csv,image/pnj, image/jpeg, application/pdf, text/html, " + "text/plain, application/excel, application/vnd.ms-excel, " + "application/x-excel, application/x-msexcel, application/octet-stream");
 			firefoxOption.addPreference("pdfjs.disabled", true);
+			/*run inprivate - chạy ẩn danh */
+			//firefoxOption.addArguments("-private");
 			
 			FirefoxDriverService firefoxservice = new GeckoDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "FirefoxDriver.log")).build();
 			driver = new FirefoxDriver(firefoxservice, firefoxOption);
@@ -93,6 +99,8 @@ public class BaseTest {
 			edgeOption.addArguments("--disable-notifications");
 			edgeOption.addArguments("--disable-geolocation");
 			edgeOption.addArguments("--lang=vi");
+			/*run inprivate - chạy ẩn danh */
+			//edgeOption.addArguments("--inprivate");
 			edgeOption.setExperimentalOption("useAutomationExtension", false);
 			edgeOption.setExperimentalOption("prefs", prefss);
 			edgeOption.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
