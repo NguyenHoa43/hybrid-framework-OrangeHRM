@@ -57,8 +57,8 @@
       <sourceFolder url="file://$MODULE_DIR$/testcase" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/testdata" isTestSource="false" />
     </content>
+    <orderEntry type="jdk" jdkName="17" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library">
       <library name="bcpkix-jdk15on-1.64.jar">
         <CLASSES>
@@ -405,5 +405,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="commons-codec-1.11" level="project" />
+    <orderEntry type="library" name="allure-java-commons-2.24.0" level="project" />
   </component>
 </module>

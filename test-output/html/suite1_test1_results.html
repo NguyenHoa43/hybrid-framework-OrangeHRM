@@ -12,15 +12,312 @@
 <body>
 <h1>Run On CHROME</h1>
 <p>
-  Test duration: 31,261s
+  Test duration: 1,652s
 </p>
 
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">com.OrangeHRM.admin.Login</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  afterClass
+      </td>
+  <td class="duration">
+    0,007s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;String.isEmpty()&quot; because &quot;command&quot; is null</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              java.base/java.lang.Runtime.exec(Runtime.java:411)<br />
+              java.base/java.lang.Runtime.exec(Runtime.java:315)<br />
+              commons.BaseTest.closeBrowserDriver(BaseTest.java:282)<br />
+              com.OrangeHRM.admin.Login.afterClass(Login.java:87)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:229)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:215)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)<br />
+              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
+              org.testng.TestRunner.run(TestRunner.java:619)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1134)<br />
+              org.testng.TestNG.run(TestNG.java:1101)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    1,135s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"chrome"</span><br />
+    
+        
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. <br/>
+Host info: host: &apos;HAPPYBIRTH&apos;, ip: &apos;192.168.1.7&apos;</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:537)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:233)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)<br />
+              org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)<br />
+              org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:89)<br />
+              org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)<br />
+              commons.BaseTest.getBrowserDriver(BaseTest.java:74)<br />
+              com.OrangeHRM.admin.Login.beforeClass(Login.java:26)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)<br />
+              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
+              org.testng.TestRunner.run(TestRunner.java:619)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1134)<br />
+              org.testng.TestNG.run(TestNG.java:1101)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse">org.openqa.selenium.WebDriverException: Driver server process died prematurely.<br/>
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;<br/>
+Driver info: driver.version: ChromeDriver</a><br />
+        <div class="stackTrace" id="exception-2">
+                      org.openqa.selenium.remote.service.DriverService.start(DriverService.java:246)<br />
+                      org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:117)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:233)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)<br />
+                      org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)<br />
+                      org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:89)<br />
+                      org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)<br />
+                      commons.BaseTest.getBrowserDriver(BaseTest.java:74)<br />
+                      com.OrangeHRM.admin.Login.beforeClass(Login.java:26)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+                      java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)<br />
+                      org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)<br />
+                      org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)<br />
+                      java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
+                      org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
+                      org.testng.TestRunner.run(TestRunner.java:619)<br />
+                      org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
+                      org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
+                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
+                      org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+                      org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
+                      org.testng.TestNG.runSuites(TestNG.java:1134)<br />
+                      org.testng.TestNG.run(TestNG.java:1101)<br />
+                      org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br />
+                      org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br />
+                      org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+          <tr class="group">
+        <td colspan="3">com.OrangeHRM.pim.AddEmployee</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  afterClass
+      </td>
+  <td class="duration">
+    0,004s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;String.isEmpty()&quot; because &quot;command&quot; is null</b></a><br />
+    <div class="stackTrace" id="exception-3">
+              java.base/java.lang.Runtime.exec(Runtime.java:411)<br />
+              java.base/java.lang.Runtime.exec(Runtime.java:315)<br />
+              commons.BaseTest.closeBrowserDriver(BaseTest.java:282)<br />
+              com.OrangeHRM.pim.AddEmployee.afterClass(AddEmployee.java:74)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:229)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:215)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)<br />
+              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
+              org.testng.TestRunner.run(TestRunner.java:619)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1134)<br />
+              org.testng.TestNG.run(TestNG.java:1101)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  beforeClass
+      </td>
+  <td class="duration">
+    0,458s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"chrome"</span><br />
+    
+        
+
+        <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. <br/>
+Host info: host: &apos;HAPPYBIRTH&apos;, ip: &apos;192.168.1.7&apos;</b></a><br />
+    <div class="stackTrace" id="exception-4">
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:537)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:233)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)<br />
+              org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)<br />
+              org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:89)<br />
+              org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)<br />
+              commons.BaseTest.getBrowserDriver(BaseTest.java:74)<br />
+              com.OrangeHRM.pim.AddEmployee.beforeClass(AddEmployee.java:31)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)<br />
+              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
+              org.testng.TestRunner.run(TestRunner.java:619)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1134)<br />
+              org.testng.TestNG.run(TestNG.java:1101)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-5', 'block')" title="Click to expand/collapse">org.openqa.selenium.WebDriverException: Driver server process died prematurely.<br/>
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;<br/>
+Driver info: driver.version: ChromeDriver</a><br />
+        <div class="stackTrace" id="exception-5">
+                      org.openqa.selenium.remote.service.DriverService.start(DriverService.java:246)<br />
+                      org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:117)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:233)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)<br />
+                      org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)<br />
+                      org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:89)<br />
+                      org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)<br />
+                      commons.BaseTest.getBrowserDriver(BaseTest.java:74)<br />
+                      com.OrangeHRM.pim.AddEmployee.beforeClass(AddEmployee.java:31)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+                      java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)<br />
+                      org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)<br />
+                      org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)<br />
+                      java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
+                      org.testng.TestRunner.privateRun(TestRunner.java:819)<br />
+                      org.testng.TestRunner.run(TestRunner.java:619)<br />
+                      org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br />
+                      org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br />
+                      org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br />
+                      org.testng.SuiteRunner.run(SuiteRunner.java:336)<br />
+                      org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+                      org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+                      org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br />
+                      org.testng.TestNG.runSuitesLocally(TestNG.java:1228)<br />
+                      org.testng.TestNG.runSuites(TestNG.java:1134)<br />
+                      org.testng.TestNG.run(TestNG.java:1101)<br />
+                      org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br />
+                      org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)<br />
+                      org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+    
+      </table>
 
 
 
-
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
           <tr>
         <td colspan="3" class="group">com.OrangeHRM.admin.Login</td>
       </tr>
@@ -30,10 +327,10 @@
                   TC_01_Login_Page_Not_User
       </td>
   <td class="duration">
-    1,454s
+    0,000s
   </td>
   <td class="result">
-        
+                               
     
         
 
@@ -44,10 +341,10 @@
                   TC_02_Login_Page_Not_Password
       </td>
   <td class="duration">
-    1,177s
+    0,000s
   </td>
   <td class="result">
-        
+                               
     
         
 
@@ -58,10 +355,10 @@
                   TC_03_Login_Page_Wrong_User
       </td>
   <td class="duration">
-    2,066s
+    0,000s
   </td>
   <td class="result">
-        
+                               
     
         
 
@@ -72,10 +369,10 @@
                   TC_04_Login_Page_Wrong_Password
       </td>
   <td class="duration">
-    2,260s
+    0,000s
   </td>
   <td class="result">
-        
+                               
     
         
 
@@ -86,10 +383,10 @@
                   TC_05_Login_Page_Successfull
       </td>
   <td class="duration">
-    0,985s
+    0,000s
   </td>
   <td class="result">
-        
+                               
     
         
 
@@ -104,16 +401,17 @@
                   TC_01_Creat_New_Employee
       </td>
   <td class="duration">
-    7,529s
+    0,001s
   </td>
   <td class="result">
-        
+                               
     
         
 
       </td>
 </tr>
       </table>
+
   
 </body>
 </html>
